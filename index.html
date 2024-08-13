@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- alt + z to rappel lines -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Bootstrap Framework -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container-lg header-cont">
+        <!-- navbar -->
+        <nav class="navbar d-flex align-items-center px-3 px-md-none">
+          <!-- nav -->
+          <!-- Mobile nav -->
+          <div class="d-flex align-items-center d-md-none d-block">
+            <a
+              href="#sidebar"
+              class="me-3 mt-2"
+              data-bs-toggle="offcanvas"
+              role="button"
+              aria-controls="sidebar"
+              ><img src="images/icon-menu.svg" alt="menu"
+            /></a>
+            <div class="mobile-logo logo navbar-brand">
+              <img src="images/logo.svg" alt="sneakers logo" />
+            </div>
+          </div>
+          <!-- Desktop nav -->
+          <ul class="navbar-nav d-none d-md-flex flex-row align-items-center">
+            <div class="logo navbar-brand">
+              <img src="images/logo.svg" alt="sneakers logo" />
+            </div>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="#">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="cart-box d-flex align-items-center">
+            <div class="cart">
+              <div class="cart-icon-holder">
+                <img class="cart-icon" src="images/icon-cart.svg" alt="Cart" />
+                <span></span>
+              </div>
+              <div class="cart-content">
+                <h4 class="cart-header">cart</h4>
+                <div class="cart-body empty">
+                  <p class="empty-cart">Your cart is empty</p>
+                  <img
+                    class="cart-img"
+                    src="images/image-product-1-thumbnail.jpg"
+                    alt="image-product-1-thumbnail"
+                  />
+                  <div class="details">
+                    <h5>Fall Limited Edition Sneakers</h5>
+                    <span class="per-one"></span> x
+                    <span class="amount"></span>
+                    <span class="per-all"></span>
+                  </div>
+                  <img
+                    class="delete-icon"
+                    src="images/icon-delete.svg"
+                    alt="delete icon"
+                  />
+                </div>
+                <div class="cart-footer">
+                  <button class="check-out">Checkout</button>
+                </div>
+              </div>
+            </div>
+            <img
+              class="avatar img-fluid ms-4 ms-md-5"
+              src="images/image-avatar.png"
+              alt="avatar"
+            />
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-lg">
+        <div class="grid-box d-flex justify-content-between align-items-center">
+          <div class="images">
+            <figure class="img-preview">
+              <span class="previous d-flex d-sm-none"
+                ><img src="images/icon-previous.svg" alt="previous-icon"
+              /></span>
+              <img
+                class="img-fluid active-img"
+                src="images/image-product-1.jpg"
+                alt="product-1-img"
+              />
+              <span class="next d-flex d-sm-none"
+                ><img src="images/icon-next.svg" alt="next-icon"
+              /></span>
+            </figure>
+            <figure class="img-navigation d-none d-sm-flex">
+              <img
+                class="active"
+                src="images/image-product-1-thumbnail.jpg"
+                alt="image-product-1-thumbnail"
+                data-index="0"
+              />
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="image-product-2-thumbnail"
+                data-index="1"
+              />
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="image-product-3-thumbnail"
+                data-index="2"
+              />
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="image-product-4-thumbnail"
+                data-index="3"
+              />
+            </figure>
+          </div>
+          <div class="content">
+            <h3>Sneaker Company</h3>
+            <h2 class="display-md-4 fw-bold">Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+            <div class="price">
+              <span class="fw-bolder">$125.00</span>
+              <span class="badget bg-black text-white rounded">50%</span>
+              <span class="d-sm-block text-decoration-line-through"
+                >$250.00</span
+              >
+            </div>
+            <div
+              class="suply d-flex flex-column flex-sm-row justify-content-between align-items-center"
+            >
+              <button
+                class="btn d-flex justify-content-between align-items-center"
+              >
+                <img src="images/icon-minus.svg" alt="minus" />
+                <span class="count">0</span>
+                <img src="images/icon-plus.svg" alt="plus" />
+              </button>
+              <button class="d-flex">
+                <img src="images/icon-cart.svg" alt="cart-icon" />
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="sidebar-label"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <ul class="offcanvas-body d-flex flex-column">
+        <li>
+          <a href="#">Collections</a>
+        </li>
+        <li>
+          <a href="#">Men</a>
+        </li>
+        <li>
+          <a href="#">Women</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Images Gallery -->
+    <div class="gallery-container">
+      <div class="images gallery">
+        <span class="close-gallery">
+          <img src="images/icon-close.svg" alt="close-gallery-icon" />
+        </span>
+        <figure class="img-preview">
+          <span class="previous"
+            ><img src="images/icon-previous.svg" alt="previous-icon"
+          /></span>
+          <img
+            class="img-fluid active-img"
+            src="images/image-product-1.jpg"
+            alt="product-1-img"
+          />
+          <span class="next"
+            ><img src="images/icon-next.svg" alt="next-icon"
+          /></span>
+        </figure>
+        <figure class="img-navigation d-none d-sm-flex">
+          <img
+            class="active"
+            src="images/image-product-1-thumbnail.jpg"
+            alt="image-product-1-thumbnail"
+            data-index="0"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="image-product-2-thumbnail"
+            data-index="1"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="image-product-3-thumbnail"
+            data-index="2"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="image-product-4-thumbnail"
+            data-index="3"
+          />
+        </figure>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
